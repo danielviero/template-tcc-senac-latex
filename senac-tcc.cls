@@ -1,6 +1,8 @@
 %%
-%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para o Centro Universitário Senac.
-%% Desenvolvido inicialmente por Daniel de Mello Viero em jan/2019 e cedido à instituição.
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para 
+%% TCC de pós-graduação EAD do Centro Universitário Senac.
+%% Desenvolvido para uso particular por Daniel de Mello Viero em jan/2019 
+%% e cedido à comunidade.
 %%
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
@@ -48,7 +50,7 @@
 \usepackage{lmodern}			% Usa a fonte Latin Modern			
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
-%\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
@@ -62,7 +64,7 @@
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
 % ---
-% Ajustes nos comandos de dados
+% Ajustes nos comandos de dados com regras específicas do SENAC EAD
 % ---
 % Mudança da denominação "Orientador" para "Mediador"
 \renewcommand{\orientadorname}{Mediador(a):}
