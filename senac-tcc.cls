@@ -1,8 +1,13 @@
-%%
-%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para 
+%% Extensão do estilo abnTeX2 (https://github.com/abntex/abntex2) para 
 %% TCC de pós-graduação EAD do Centro Universitário Senac.
-%% Desenvolvido para uso particular por Daniel de Mello Viero em jan/2019 
-%% e cedido à comunidade.
+%% Desenvolvido para uso específico por Daniel de Mello Viero em maio/2019.
+
+%% Este arquivo de classe e o template estão disponíveis para quem quiser usar,
+%% mas talvez não se aplique a todos os casos. Está aberto para aprimoramento 
+%% pelos interessados. Eu não tenho profundo conhecimento em Latex, sugiro 
+%% consultar a ótima documentação em https://github.com/abntex/abntex2 
+%% (que eu usei para criar esta customização).
+
 %%
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
@@ -14,9 +19,9 @@
 %%
 %% This work has the LPPL maintenance status `maintained'.
 %% 
-%% The Current Maintainer of this work is SENAC, **email**.
+%% The Current Maintainer of this work is Daniel Viero <daniel.viero@gmail.com>.
 %%
-%% Further information about abnTeX2 are available on http://abntex2.googlecode.com/
+%% Further information about abnTeX2 are available on https://github.com/abntex/abntex2.
 %%
 
 \NeedsTeXFormat{LaTeX2e}
@@ -206,6 +211,9 @@
     \end{center}
 }
 
+% ---
+% Folha de aprovação temporária, conforme modelo do SENAC.
+% ---
 \newcommand{\imprimirfolhadeaprovacaotemporaria}{%
     \begin{folhadeaprovacao}
         {\large\imprimirautor}

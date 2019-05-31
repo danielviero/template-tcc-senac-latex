@@ -1,8 +1,16 @@
 %%
-%% Template de TCC para os cursos do Centro Universitário SENAC
-%% Desenvolvido por Daniel de Mello Viero <daniel.viero@gmail.com> 
-%% em jan/2019 e cedido à comunidade.
-%%
+%% Template de TCC para os cursos EAD do Centro Universitário SENAC.
+%% Desenvolvido por Daniel de Mello Viero <daniel.viero@gmail.com> em maio/2019.
+%% Foi baseado no modelo DOCX fornecido pelo SENAC.
+%% A estrutura está quase toda definida na classe senac-tcc.cls. Este arquivo
+%% tem o conteúdo do TCC.
+
+%% Este template e o arquivo de classe estão disponíveis para quem quiser usar,
+%% mas talvez não se aplique a todos os casos. Está aberto para aprimoramento 
+%% pelos interessados. Eu não tenho profundo conhecimento em Latex, sugiro 
+%% consultar a ótima documentação em https://github.com/abntex/abntex2 
+%% (que eu usei para criar a customização) e outras fontes na Internet.
+
 \documentclass[]{senac-tcc}
 
 % ---
@@ -23,18 +31,21 @@
 \autor{Nome do Aluno}
 \curso{Nome do Curso}
 \local{São Paulo}
-\data{XXXX}
+\campus{Santo Amaro}
+\data{2019}
 \orientador{Nome do mediador}
 %\coorientador{Nome do co-orientador, se aplicável}
-% ---
+\examinadores{Nome 1}{Nome 2}
 
 % ---
 % Configurações de aparência do PDF final
-
+% ---
 % alterando o aspecto da cor azul
 \definecolor{blue}{RGB}{41,5,195}
 
+% ---
 % informações do PDF
+% ---
 \makeatletter
 \hypersetup{
      	%pagebackref=true,
@@ -42,7 +53,7 @@
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		pdfkeywords={palavra-chave 1}{palavra-chave 2}{palavra-chave 3}, 
 		colorlinks=true,       		% false: boxed links; true: colored links
     	linkcolor=blue,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
@@ -104,85 +115,21 @@
 % Substitua o arquivo exemplo usado aqui.
 %
 \begin{fichacatalografica}
-    \includepdf{fichacatalografica.pdf}
+    \includepdf{ficha_catalografica.pdf}
 \end{fichacatalografica}
-% ---
-
-% ---
-% Inserir errata
-% ---
-\begin{errata}
-Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
-
-\vspace{\onelineskip}
-
-FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
-reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
-rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
-cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
-Zootecnia, Universidade de São Paulo, São Paulo, 2011.
-
-\begin{table}[htb]
-\center
-\footnotesize
-\begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
-  \hline
-   \textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
-    \hline
-    1 & 10 & auto-conclavo & autoconclavo\\
-   \hline
-\end{tabular}
-\end{table}
-
-\end{errata}
 % ---
 
 % ---
 % Inserir folha de aprovação
 % ---
-
-% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% Isto monta um exemplo de Folha de aprovação, elemento obrigatório da NBR
 % 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
-% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
-% imagem da página assinada pela banca com o comando abaixo:
+% do trabalho. Após isso, substitua por uma imagem da página assinada pela 
+% banca com o comando abaixo:
 %
 % \includepdf{folhadeaprovacao_final.pdf}
 %
-\begin{folhadeaprovacao}
-
-  \begin{center}
-    {\ABNTEXchapterfont\large\imprimirautor}
-
-    \vspace*{\fill}\vspace*{\fill}
-    \begin{center}
-      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
-    \end{center}
-    \vspace*{\fill}
-    
-    \hspace{.45\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \imprimirpreambulo
-    \end{minipage}%
-    \vspace*{\fill}
-   \end{center}
-        
-   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
-
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-   %\assinatura{\textbf{Professor} \\ Convidado 3}
-   %\assinatura{\textbf{Professor} \\ Convidado 4}
-      
-   \begin{center}
-    \vspace*{0.5cm}
-    {\large\imprimirlocal}
-    \par
-    {\large\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
-  
-\end{folhadeaprovacao}
+\imprimirfolhadeaprovacaotemporaria
 % ---
 
 % ---
@@ -192,8 +139,7 @@ Zootecnia, Universidade de São Paulo, São Paulo, 2011.
    \vspace*{\fill}
    \centering
    \noindent
-   \textit{ Este trabalho é dedicado às crianças adultas que,\\
-   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
+   \textit{Dedico este trabalho xxxxxxxxx.} \vspace*{\fill}
 \end{dedicatoria}
 % ---
 
@@ -201,23 +147,7 @@ Zootecnia, Universidade de São Paulo, São Paulo, 2011.
 % Agradecimentos
 % ---
 \begin{agradecimentos}
-Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
-Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
-Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
-projeto abn\TeX\ foram extraídos de
-\url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
-contribuíram para que a produção de trabalhos acadêmicos conforme
-as normas ABNT com \LaTeX\ fosse possível.
-
-Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
-da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
-Brasília (CPAI), ao grupo de usuários
-\emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
-novos voluntários do grupo
-\emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
-\url{http://abntex2.googlecode.com/}}~que contribuíram e que ainda
-contribuirão para a evolução do \abnTeX.
-
+Seus agradecimentos.
 \end{agradecimentos}
 % ---
 
@@ -227,11 +157,8 @@ contribuirão para a evolução do \abnTeX.
 \begin{epigrafe}
     \vspace*{\fill}
 	\begin{flushright}
-		\textit{``Não vos amoldeis às estruturas deste mundo, \\
-		mas transformai-vos pela renovação da mente, \\
-		a fim de distinguir qual é a vontade de Deus: \\
-		o que é bom, o que Lhe é agradável, o que é perfeito.\\
-		(Bíblia Sagrada, Romanos 12, 2)}
+		\textit{``Epígrafe.''\\
+		(autor)}
 	\end{flushright}
 \end{epigrafe}
 % ---
@@ -243,48 +170,22 @@ contribuirão para a evolução do \abnTeX.
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
- Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
- objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do
- tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
- resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
+ \lipsum[1] % substitua por seu resumo
 
- \textbf{Palavras-chaves}: latex. abntex. editoração de texto.
+ \textbf{Palavras-chaves}: palavra-chave, palavra-chave, palavra-chave.
 \end{resumo}
 
 % resumo em inglês
 \begin{resumo}[Abstract]
  \begin{otherlanguage*}{english}
-   This is the english abstract.
+   \lipsum[1] % substitua por seu resumo
 
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Key-words}: latex. abntex. text editoration.
+   \textbf{Keywords}: keyword, keyword, keyword.
  \end{otherlanguage*}
 \end{resumo}
-
-% resumo em francês 
-\begin{resumo}[Résumé]
- \begin{otherlanguage*}{french}
-    Il s'agit d'un résumé en français.
- 
-   \textbf{Mots-clés}: latex. abntex. publication de textes.
- \end{otherlanguage*}
-\end{resumo}
-
-% resumo em espanhol
-\begin{resumo}[Resumen]
- \begin{otherlanguage*}{spanish}
-   Este es el resumen en español.
-  
-   \textbf{Palabras clave}: latex. abntex. publicación de textos.
- \end{otherlanguage*}
-\end{resumo}
-% ---
 
 % ---
 % inserir lista de ilustrações
@@ -306,8 +207,10 @@ contribuirão para a evolução do \abnTeX.
 % inserir lista de abreviaturas e siglas
 % ---
 \begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
+  \item[EAD] Educação à Distância
+  \item[SENAC] Serviço Nacional do Comércio
+  \item[TIC] Tecnologia da Informação e Comunicação
+  \item[WS] \textit{Web Service}
 \end{siglas}
 % ---
 
@@ -315,10 +218,8 @@ contribuirão para a evolução do \abnTeX.
 % inserir lista de símbolos
 % ---
 \begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
   \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
+  \item[$ \mu $] Micro
 \end{simbolos}
 % ---
 
@@ -338,114 +239,116 @@ contribuirão para a evolução do \abnTeX.
 \textual
 
 % ----------------------------------------------------------
-% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
+% Introdução
 % ----------------------------------------------------------
-\chapter*[Introdução]{Introdução}
-\addcontentsline{toc}{chapter}{Introdução}
-% ----------------------------------------------------------
+\chapter[Introdução]{Introdução}
 
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
-exemplifica a elaboração de trabalho acadêmico (tese, dissertação e outros do
-gênero) produzido conforme a ABNT NBR 14724:2011 \emph{Informação e documentação
-- Trabalhos acadêmicos - Apresentação}.
+\textcolor{red}{Coloque aqui sua introdução.} \lipsum[2]
 
-A expressão ``Modelo Canônico'' é utilizada para indicar que \abnTeX\ não é
-modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
-observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
+\section{Tema}
 
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-\url{http://abntex2.googlecode.com/}. Também fique livre para conhecer,
-estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-modificados tenham seus nomes alterados e que os créditos sejam dados aos
-autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
+\textcolor{red}{Escreva aqui seu tema -- utilize uma ou duas linhas.}
 
-Encorajamos que sejam realizadas customizações específicas deste exemplo para
-universidades e outras instituições --- como capas, folha de aprovação, etc.
-Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-\abnTeX, distribua-se arquivos com as respectivas customizações.
-Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
-incompatíveis com as customizações promovidas. Consulte
-\citeonline{abntex2-wiki-como-customizar} par mais informações.
+\section{Justificativa}
 
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
-\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
-\cite{memoir}. 
+\textcolor{red}{Escreva aqui a sua Justificativa -- mais ou menos 2 ou 3 parágrafos.} \lipsum[3-5]
 
-Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
-você produzirá, de modo que o principal esforço seja concentrado no principal:
-na contribuição científica.
+\section{Objetivos}
 
-Equipe \abnTeX 
+\subsection{Objetivo geral}
 
-Lauro César Araujo
+\textcolor{red}{Escreva aqui seu objetivo geral.}
+
+\subsection{Objetivos específicos}
+
+\begin{itemize}
+    \item \textcolor{red}{Escreva aqui seu objetivo específico 1;}
+    \item \textcolor{red}{Escreva aqui seu objetivo específico 2;}
+    \item \textcolor{red}{Escreva aqui seu objetivo específico 3 –- se houver...}
+\end{itemize}
 
 
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
-\part{Preparação da pesquisa}
-% ----------------------------------------------------------
+\subsection{Problema de pesquisa}
 
-% ---
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
-% ---
-\include{abntex2-modelo-include-comandos}
-% ---
+\textcolor{red}{Escreva aqui seu problema de pesquisa -– normalmente um parágrafo.} \lipsum[6]
+
+\subsection{Delimitação do problema de pesquisa}
+
+\textcolor{red}{Escreva aqui sua delimitação do tema de pesquisa – normalmente um parágrafo.} \lipsum[7]
+
+No primeiro capítulo apresenta a Introdução e xxx xxx xx xx.
+ 	
+O segundo capítulo apresenta o Referencial Teórico, detalhando xxxxxxx xxx.
+	
+O terceiro capítulo apresenta o Referencial Teórico, detalhando outro tópico xxxxxxxxx.
+
+O quarto capítulo apresenta a metodologia de pesquisa. A Metodologia de pesquisa escolhida é a xxx xxx xxxxx e consistirá no Levantamento XXXXX com a revisão da literatura sobre o tema em estudo, além de análise das informações sobre a empresa, objeto deste trabalho.
+
+O quinto capítulo traz a Análise dos Dados xxx x xxxx xxxxx.
+
+No sexto capítulo são apresentadas as Considerações Finais e xxx x x xxx .
+
+Por fim no capítulo sete são apresentadas as Referências xxx x x xxx x xx.
 
 % ----------------------------------------------------------
-% PARTE
+% REFERENCIAL TEORICO
 % ----------------------------------------------------------
-\part{Referenciais teóricos}
+\chapter{Um Assunto do Referencial Teórico}
+
+	\textcolor{red}{Revisão da literatura sobre o primeiro conceito ou assunto teórico utilizado (ex: WEB SITES).}
+	
+	\lipsum[8-9]
+
+\chapter{Outro Assunto do Referencial Teórico}
+
+    \textcolor{red}{Revisão da literatura sobre o segundo conceito ou assunto teórico utilizado (ex: TIPOS DE WEB SITES).}
+
+	\lipsum[10-11]
+	
 % ----------------------------------------------------------
+% METODOLOGIA
+% ----------------------------------------------------------
+\chapter{Metodologia}
 
-% ---
-% Capitulo de revisão de literatura
-% ---
-\chapter{Lorem ipsum dolor sit amet}
-% ---
+\textcolor{red}{Este capítulo apresenta a metodologia da sua pesquisa.}
 
-% ---
-\section{Aliquam vestibulum fringilla lorem}
-% ---
+\begin{itemize}
+    \item Abordagem qualitativa 
+    \item Pesquisa bibliográfica
+    \item Pesquisa documental (caso utilize dados secundários)
+\end{itemize}
 
-\lipsum[1]
+Apresentação dos dados secundários (se houver).
 
-\lipsum[2-3]
+O autor \citeonline{mascarenhas_2012} escreveu sobre metodologia científica e está sendo citado aqui apenas para gerar um capítulo de referência bibliográfica mais abaixo. Por falar nisso, aqui vai um exemplo de citação direta longa:
+
+\begin{citacao}
+    ``\lipsum[26]
+    
+    O uso das aspas no Latex é curioso. Não adianta usar o caracter de aspas normais, deve-se iniciar com acento grave duplo e encerrar com duplo apóstrofe.'' \cite[p.~999, texto inventado]{mascarenhas_2012}
+\end{citacao}
+
+
+\lipsum[20]
+
 
 % ----------------------------------------------------------
-% PARTE
+% ANÁLISE DOS DADOS
 % ----------------------------------------------------------
-\part{Resultados}
+\chapter{Análise dos dados}
+
+\textcolor{red}{Análise dos dados (relação entre duas abordagens teóricas ou de teoria x dados) exemplo: relacionar os tipos de teste identificados no capitulo 3 com as tecnologias apresentadas no capitulo 2. Aqui devem ser apontadas as relações entre os fatos investigados e a teoria que lhes dá respaldo. Por exemplo: discutir se utilizar teste de sql injection é mais efetivo em plataformas Windows ou Linux ou em linguagens como ruby on rails, asp.net ou java.}
+
+\lipsum[12-13]
+
 % ----------------------------------------------------------
+% CONSIDERAÇÕES FINAIS
+% ----------------------------------------------------------
+\chapter{Considerações Finais}
 
-% ---
-% primeiro capitulo de Resultados
-% ---
-\chapter{Lectus lobortis condimentum}
-% ---
+\textcolor{red}{Nesse ponto deverão ser evidenciados os objetivos alcançados com a pesquisa (resgatando–os da sua introdução – vide item 1.3.2), indicando as limitações encontradas no desenvolvimento do trabalho e os possíveis desenvolvimentos futuros.}
 
-% ---
-\section{Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-posuere cubilia Curae}
-% ---
-
-\lipsum[21-22]
-
-% ---
-% segundo capitulo de Resultados
-% ---
-\chapter{Nam sed tellus sit amet lectus urna ullamcorper tristique interdum
-elementum}
-% ---
-
-% ---
-\section{Pellentesque sit amet pede ac sem eleifend consectetuer}
-% ---
-
-\lipsum[24]
+\lipsum[14-15]
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -453,15 +356,6 @@ elementum}
 % e adiciona espaço de parte no Sumário
 % ----------------------------------------------------------
 %\phantompart
-
-% ---
-% Conclusão (outro exemplo de capítulo sem numeração e presente no sumário)
-% ---
-\chapter*[Conclusão]{Conclusão}
-\addcontentsline{toc}{chapter}{Conclusão}
-% ---
-
-\lipsum[31-33]
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -472,7 +366,7 @@ elementum}
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
-\bibliography{abntex2-modelo-references}
+\bibliography{referencias}
 
 % ----------------------------------------------------------
 % Glossário
@@ -492,19 +386,43 @@ elementum}
 \begin{apendicesenv}
 
 % Imprime uma página indicando o início dos apêndices
-\partapendices
+%\partapendices
 
 % ----------------------------------------------------------
-\chapter{Quisque libero justo}
+\chapter{Modelo de Questionário Aplicado na Pesquisa}
 % ----------------------------------------------------------
+
+\textcolor{red}{Se você utilizou, por exemplo, um questionário para a realização da pesquisa, o modelo utilizado deverá ser colocado neste capítulo como APÊNDICE.}
 
 \lipsum[50]
 
 % ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+\chapter{Cronograma}
 % ----------------------------------------------------------
-\lipsum[55-57]
+
+O quadro a seguir apresenta a cronologia prevista para as principais etapas do desenvolvimento deste Trabalho de Conclusão de Curso.
+
+%\begin{quadro}[htb]
+%\caption{\label{quadro_cronograma}Cronograma das etapas do trabalho}
+\vskip\baselineskip
+\noindent
+\begin{tabularx}{\linewidth}{|X|c|}
+\hline
+\textbf{Etapa} & \textbf{Período previsto} \\ \hline
+1. Definição do tema de pesquisa, metodologia e referenciais iniciais & até nov/2018 \\ \hline
+2. Aprofundamento do estudo de referenciais teóricos & dez/2018 a fev/2019 \\ \hline
+3. Levantamento de dados	& jan-mar/2019 \\ \hline
+4. Aplicação de questionários & mar-abr/2019 \\ \hline
+5. Tabulação de dados & abr-jun/2019 \\ \hline
+6. Análise de dados & jun-out/2019 \\ \hline
+7. Elaboração das conclusões/considerações finais & nov-dez/2019 \\ \hline
+8. Revisão e entrega final do TCC & jan/2020 \\ \hline
+9. Preparação e realização da defesa/prova final & jan-fev/2020 \\ \hline
+\end{tabularx}
+\fonte{Autor.}
+%\end{quadro}
+
+Este cronograma é um instrumento de planejamento da elaboração deste TCC e não constará na versão final.
 
 \end{apendicesenv}
 % ---
@@ -520,25 +438,15 @@ ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 \begin{anexosenv}
 
 % Imprime uma página indicando o início dos anexos
-\partanexos
+%\partanexos
 
 % ---
-\chapter{Morbi ultrices rutrum lorem.}
+\chapter{Tabelas de Dados XPTO}
 % ---
+
+\textcolor{red}{Caso tenha utilizado no TCC tabelas de dados, cálculos, etc, deverá inserir os dados como ANEXO.}
+
 \lipsum[30]
-
-% ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
-% ---
-
-\lipsum[31]
-
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
-
-\lipsum[32]
 
 \end{anexosenv}
 
