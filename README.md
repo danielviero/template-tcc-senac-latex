@@ -2,7 +2,7 @@
 
 Modelo para escrever TCC da pós EAD do SENAC no Latex. Desenvolvido para uso específico do autor, na condição de aluno da instituição, mas pode servir a outras pessoas.
 
-Trata-se de uma customização do modelo AbnTex2 (https://github.com/abntex/abntex2), ou seja, que já herda os estilos da ABNT. Fiz adaptações conforme o guia de normatização do SENAC e o modelo fornecido aos alunos. Algumas coisas deixei como no estilo original (como a fonte Roman em vez de Arial) porque não encontrei nada no guia de normatização que obrigasse a fazer diferente. Preferi seguir o padrão da academia que está implementado no AbnTex2. Meu TCC produzido com este modelo ainda não foi entregue, de modo que não foi validado nem recebeu qualquer feedback do SENAC.
+Trata-se de uma customização do modelo AbnTex2 (https://github.com/abntex/abntex2), ou seja, que já herda os estilos da ABNT. Fiz adaptações conforme o guia de normatização do SENAC e o modelo fornecido aos alunos. Algumas coisas deixei como no estilo original (como a fonte Roman em vez de Arial) porque não encontrei nada no guia de normatização que obrigasse a fazer diferente. Preferi seguir o padrão da academia que está implementado no AbnTex2. Meu TCC produzido com este modelo foi entregue e aprovado em 2020.
 
 Estão disponíveis um arquivo de classe de documento (senac-tcc.cls); um modelo de TCC com os textos padrão (template-tcc.tex); um arquivo de referências bibliográficas "dummy" (referencias.bib); e um exemplo de ficha catalográfica em PDF gerada pelo site da Biblioteca do SENAC.
 
